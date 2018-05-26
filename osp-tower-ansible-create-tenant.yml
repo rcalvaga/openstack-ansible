@@ -1,0 +1,11 @@
+---
+- name: Create a OSP User
+  hosts: all
+  gather_facts: True
+  tasks:
+
+   - name: Create OSP User
+     os_user_facts:
+        cloud: test-drive
+   - debug:
+     var: openstack_users
