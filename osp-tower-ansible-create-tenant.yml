@@ -1,6 +1,6 @@
 ---
 - name: Create a OSP User
-  hosts: all
+  hosts: localhost
   gather_facts: True
   tasks:
 
