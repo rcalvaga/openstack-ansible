@@ -14,7 +14,7 @@
         domain: default
         default_project: test-drive
         auth:
-          auth_url: https://192.168.200.10
+          auth_url: https://192.168.200.10:13000/v3
           username: td-admin
           password: r3dh4t!
         verify: no
