@@ -7,6 +7,6 @@
 
    - name: Create OSP User
      os_user_facts:
-        cloud: test-drive
+        name: test-admin
    - debug:
      var: openstack_users
