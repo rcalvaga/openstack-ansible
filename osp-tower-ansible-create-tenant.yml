@@ -13,6 +13,7 @@
           username: td-admin
           password: r3dh4t!
           project_name: test-drive
+        domain: Default
         verify: no
    - debug:
      var: openstack_users
