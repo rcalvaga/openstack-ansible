@@ -22,5 +22,5 @@
         flavor: m1.tiny
         nics:
          - net-name: private
-       meta:
-         hostname: test1
+        meta:
+           hostname: test1
