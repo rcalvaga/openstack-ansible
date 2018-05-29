@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Verify os_client_config 
+      shell: 'env | grep -i "os_client_config_file"'
+      connection: local
+    - name: Display the contents of the file
+      shell: "cat $OS_CLIENT_CONFIG_FILE"
+      connection: local
