@@ -19,7 +19,7 @@
         image: 	RHEL-7
         key_name: test-drive-key
         timeout: 200
-        flavor: m1.tiny
+        flavor: m1.small
         nics:
          - net-name: private
         meta:
