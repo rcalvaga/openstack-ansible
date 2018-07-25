@@ -18,7 +18,7 @@
         verify: no
         name: vmtest1
         image: 	RHEL-7
-        key_name: test-drive-key
+ #       key_name: test-drive-key
         timeout: 200
         flavor: m1.small
         nics:
