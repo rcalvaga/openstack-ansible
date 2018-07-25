@@ -12,12 +12,5 @@
         password: secret
         email: test@example.com
         cloud: devstack
-        auth:
-          auth_url: https://192.168.200.10:13000/v3
-          domain_name: Default
-          password: r3dh4t!
-          project_name: test-drive
-          username: td-admin
-        verify: no
    - debug:
      var: openstack_user
