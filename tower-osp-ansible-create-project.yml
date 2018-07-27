@@ -12,8 +12,11 @@
         description: test project
         enabled: yes
         wait: yes
+        auth_type: password
         region_name: regionOne
         availability_zone: nova
+        interface: public
         api_timeout: 60
+        domain_id: default
         cloud: devstack
         verify: no
