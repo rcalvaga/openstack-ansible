@@ -1,0 +1,17 @@
+---
+- name: Create a OSP Project
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+
+   - name: Create OSP Project
+     os_project:
+        state: present
+        name: test
+        description: test project
+        enabled: yes
+        wait: yes
+        region_name: regionOne
+        cloud: devstack
+        verify: no
