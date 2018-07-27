@@ -8,9 +8,9 @@
    - name: Create OSP User
      os_user:
         state: present
-        name: test
-        password: secret
-        email: test@example.com
+        name: td-user
+        password: r3dh4t!
+        email: td-user@example.com
         cloud: devstack
         verify: no
      register: openstack_user
