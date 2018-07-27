@@ -3,6 +3,9 @@
   hosts: localhost
   connection: local
   gather_facts: False
+  vars:
+    os_auth:
+      cloud: devstack
   tasks:
 
    - name: Create OSP Project
@@ -18,5 +21,6 @@
         interface: public
         api_timeout: 180
         domain_id: default
+        auth: "{{ os_auth }}"
         cloud: devstack
         verify: no
