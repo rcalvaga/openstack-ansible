@@ -16,7 +16,7 @@
         region_name: regionOne
         availability_zone: nova
         interface: public
-        api_timeout: 60
+        api_timeout: 180
         domain_id: default
         cloud: devstack
         verify: no
