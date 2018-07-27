@@ -22,6 +22,6 @@
         availability_zone: nova
         interface: public
         api_timeout: 180
-        domain_id: default
+        domain_id: Default
         cloud: devstack
         verify: no
