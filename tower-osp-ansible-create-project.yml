@@ -15,7 +15,7 @@
         state: present
         name: test
         description: test project
-        enabled: yes
+        enabled: True
         wait: yes
         auth_type: password
         region_name: regionOne
