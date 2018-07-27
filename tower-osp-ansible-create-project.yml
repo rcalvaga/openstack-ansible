@@ -15,13 +15,13 @@
         state: present
         name: test
         description: test project
-        enabled: True
+#        enabled: True
         wait: yes
-        auth_type: password
-        region_name: regionOne
-        availability_zone: nova
-        interface: public
-        api_timeout: 180
-        domain_id: Default
+#        auth_type: password
+#        region_name: regionOne
+#        availability_zone: nova
+#        interface: public
+#        api_timeout: 180
+#        domain_id: Default
         cloud: devstack
         verify: no
