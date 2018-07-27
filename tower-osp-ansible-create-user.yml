@@ -12,6 +12,7 @@
         password: secret
         email: test@example.com
         cloud: devstack
+        verify: no
      register: openstack_user
      
    - debug: 
