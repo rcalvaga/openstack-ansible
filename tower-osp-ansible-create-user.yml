@@ -8,11 +8,13 @@
    - name: Create OSP User
      os_user:
         state: present
-        name: td-user
-        password: r3dh4t!
-        email: td-user@example.com
+        name: test
+        password: secret
+        email: test@example.com
         cloud: devstack
         verify: no
+        domain: default
+        default_project: test-drive
      register: openstack_user
      
    - debug: 
