@@ -8,6 +8,7 @@
    - name: Authenticate to the cloud
      os_auth:
        cloud: devstack
+       verify: no
 
    - name: Create OSP Project
      os_project:
