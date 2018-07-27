@@ -13,5 +13,7 @@
         enabled: yes
         wait: yes
         region_name: regionOne
+        availability_zone: nova
+        api_timeout: 60
         cloud: devstack
         verify: no
