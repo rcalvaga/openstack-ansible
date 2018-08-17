@@ -10,7 +10,7 @@
 - name: Download JBoss from jboss.org
   get_url: url=http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip dest=/opt/jboss-as-7.1.1.Final.zip
   register: result
-  until: result | success
+  until: result is success
   retries: 5
   delay: 10
   
