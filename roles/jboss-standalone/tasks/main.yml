@@ -44,10 +44,6 @@
 - name: Copy the jboss-modules.jar file
   copy: src=jboss-modules-1.1.5.GA.jar dest=/usr/share/jboss-as/jboss-modules.jar mode=0644
 
-- name: Workaround for systemd bug
-  shell: service jboss start && chkconfig jboss on
-  warn: false
-
 - name: Enable JBoss to be started at boot
   service: name=jboss enabled=yes state=started
 
