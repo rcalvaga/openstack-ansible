@@ -1,0 +1,7 @@
+- name: Install Ticketmonster App
+  hosts: all
+  
+  roles:
+   - common
+   - jboss-standalone
+   - java-app
