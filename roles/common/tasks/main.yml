@@ -1,3 +1,10 @@
 ---
 - name: Use Repos Template
   template: src=opentlc.repo dest=/etc/yum.repos.d
+
+- name: Add Public DNS to resolv.conf
+  lineninfile:
+     path: /etc/resolv.conf
+     state: present
+     insertafter: 'search openstacklocal localdomain'
+     line: 'nameserver 8.8.8.8'
