@@ -46,8 +46,7 @@
 
 - name: Workaround for systemd bug
   shell: service jboss start && chkconfig jboss on
-  args:
-     warn=False
+  warn: no
 
 - name: Enable JBoss to be started at boot
   service: name=jboss enabled=yes state=started
