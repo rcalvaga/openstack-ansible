@@ -23,11 +23,9 @@
 
 - name: Copying standalone.xml configuration file
   template: src=standalone.xml dest=/usr/share/jboss-as/standalone/configuration/
-  notify: restart jboss
   
 - name: Adding JBoss AP 7 Admin User
   template: src=mgmt-users.properties dest=/usr/share/jboss-as/standalone/configuration/mgmt-users.properties
-  notify: restart jboss
 
 - name: Add group "jboss"
   group: name=jboss
