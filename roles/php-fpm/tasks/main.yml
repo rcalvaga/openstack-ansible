@@ -11,7 +11,7 @@
     - php-IDNA_Convert
     - php-mbstring-5.4.45-13.el7.remi
     - php-mysql-5.4.45-13.el7.remi
-    - php-PHPMailer-5.2.25-2.el7.remi.noarch
+    - php-PHPMailer
     - php-process-5.4.45-13.el7.remi
     - php-simplepie
     - php-xml-5.4.45-13.el7.remi
