@@ -1,6 +1,6 @@
 [nginx]
 name=Nginx repo - $basearch
-baseurl=http://nginx.org/packages/centos/7/$basearch
+baseurl=http://nginx.org/packages/rhel/7/$basearch
 failovermethod=priority
 gpgcheck=1
 enabled=1
