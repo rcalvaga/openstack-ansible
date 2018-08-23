@@ -2,7 +2,7 @@
 - name: Install php-fpm and deps
   yum: name={{ item }} state=present
   with_items:
-    - php
+    - php-5.4.45-13.el7.remi
     - php-fpm
     - php-enchant
     - php-IDNA_Convert
