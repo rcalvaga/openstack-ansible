@@ -3,15 +3,15 @@
   yum: name={{ item }} state=present
   with_items:
     - php-5.4.45-13.el7.remi
-    - php-fpm
-    - php-enchant
+    - php-fpm-5.4.45-13.el7.remi
+    - php-enchant-5.4.45-13.el7.remi
     - php-IDNA_Convert
-    - php-mbstring
-    - php-mysql
+    - php-mbstring-5.4.45-13.el7.remi
+    - php-mysql-5.4.45-13.el7.remi
     - php-PHPMailer
-    - php-process
+    - php-process-5.4.45-13.el7.remi
     - php-simplepie
-    - php-xml
+    - php-xml-5.4.45-13.el7.remi
 
 - name: Disable default pool
   command: mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.disabled creates=/etc/php-fpm.d/www.disabled
