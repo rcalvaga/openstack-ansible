@@ -1,6 +1,6 @@
 ---
 - name: Install nginx
-  yum: name=nginx-1.10.3-1 state=present
+  yum: name=nginx-1.10.3-1.el7.ngx state=present
 
 - name: Copy nginx configuration for wordpress
   template: src=default.conf dest=/etc/nginx/conf.d/default.conf
