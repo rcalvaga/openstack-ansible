@@ -1,6 +1,6 @@
 ---
 - name: Use Repos Template
-  template: src=opentlc.repo dest=/etc/yum.repos.d
+  template: src=lab.repo dest=/etc/yum.repos.d
 
 - name: Add Public DNS to resolv.conf
   lineinfile:
