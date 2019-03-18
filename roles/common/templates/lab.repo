@@ -1,0 +1,17 @@
+[rhel-7-server-rpms]
+name=Red Hat Enterprise Linux 7
+baseurl=http://10.10.0.3/repos/rhel-7-server-rpms
+enabled=1
+gpgcheck=0
+
+[rhel-7-server-rh-common-rpms]
+name=Red Hat Enterprise Linux 7
+baseurl=http://10.10.0.3/repos/rhel-7-server-rh-common-rpms
+enabled=1
+gpgcheck=0
+
+[rhel-7-server-extras-rpms]
+name=Red Hat Enterprise Linux 7
+baseurl=http://10.10.0.3/repos/rhel-7-server-extras-rpms
+enabled=1
+gpgcheck=0
