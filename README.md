@@ -9,13 +9,13 @@ Automating OpenStack tasks using Ansible
 
 - ansible
 
-root# yum install -y python-pip git
-root# pip install openstacksdk ansible -U
+`root# yum install -y python-pip git`
+`root# pip install openstacksdk ansible -U`
 
 
 * Configure a clouds.yaml file with the necessary settings to enable communication to OpenStack using the openstacksdk library:
 
-root# mkdir /etc/openstack
+`root# mkdir /etc/openstack
 root# cat << EOF > /etc/openstack/clouds.yaml
 clouds:
   ospcloud:
@@ -30,12 +30,12 @@ ansible:
   use_hostnames: True
   expand_hostvars: False
   fail_on_errors: True
-EOF
+EOF`
 
 * Request an authentication token:
 
-root# ansible localhost -m os_auth -a cloud=ospcloud
+`root# ansible localhost -m os_auth -a cloud=ospcloud`
 
 * List all of the OpenStack users:
 
-root# ansible localhost -m os_user_facts -a cloud=ospcloud
+`root# ansible localhost -m os_user_facts -a cloud=ospcloud`
