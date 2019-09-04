@@ -36,28 +36,28 @@
 - name: install SEManage
   yum: pkg=policycoreutils-python state=present
 
-- name: set the SELinux policy for the Wordpress directory
+- name: Set the SELinux policy for the Wordpress directory
   command: semanage fcontext -a -t httpd_sys_content_t "/srv/wordpress(/.*)?"
 
-- name: set the SELinux policy for wp-config.php
+- name: Set the SELinux policy for wp-config.php
   command: semanage fcontext -a -t httpd_sys_script_exec_t "/srv/wordpress/wp-config\.php"
 
-- name: set the SELinux policy for wp-content directory
+- name: Set the SELinux policy for wp-content directory
   command: semanage fcontext -a -t httpd_sys_rw_content_t "/srv/wordpress/wp-content(/.*)?"
 
-- name: set the SELinux policy for the *.php files
+- name: Set the SELinux policy for the *.php files
   command: semanage fcontext -a -t httpd_sys_script_exec_t "/srv/wordpress/.*\.php"
 
-- name: set the SELinux policy for the Upgrade directory
+- name: Set the SELinux policy for the Upgrade directory
   command: semanage fcontext -a -t httpd_sys_rw_content_t "/srv/wordpress/wp-content/upgrade(/.*)?"
 
-- name: set the SELinux policy for the Uploads directory
+- name: Set the SELinux policy for the Uploads directory
   command: semanage fcontext -a -t httpd_sys_rw_content_t "/srv/wordpress/wp-content/uploads(/.*)?"
 
-- name: set the SELinux policy for the wp-includes php files
+- name: Set the SELinux policy for the wp-includes php files
   command: semanage fcontext -a -t httpd_sys_script_exec_t "/srv/wordpress/wp-includes/.*\.php"
 
-- name: set the SELinux on all the Files
+- name: Set the SELinux on all the Files
   command: restorecon -Rv /srv/wordpress
 
 - name: Start php-fpm Service
