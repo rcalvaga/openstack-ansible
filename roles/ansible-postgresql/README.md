@@ -3,7 +3,7 @@ PostgreSQL
 
 Ansible role to managed [PostgreSQL](http://www.postgresql.org/).
 
-See *meta/main.yml* for the targeted distributions and releases.  This
+See *meta/main.yml* for the targeted distributions and releases. This
 is designed primarily for using the version of PostgreSQL that comes
 with the distribution and not from external repositories.
 
