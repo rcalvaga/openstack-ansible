@@ -17,9 +17,9 @@ Automating OpenStack tasks using Ansible
 
 `root# mkdir /etc/openstack`
 
-`root# cat << EOF > /etc/openstack/clouds.yaml`
+```root# cat << EOF > /etc/openstack/clouds.yaml
 
-```clouds:
+clouds:
   ospcloud:
     auth:
       auth_url: http://192.168.0.20:5000/
