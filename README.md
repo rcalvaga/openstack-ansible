@@ -1,7 +1,7 @@
 # openstack-ansible
 Automating OpenStack tasks using Ansible
 
-* Install the required packages on your laptop/workstation to configure it to run with openstacksdk, as required for OpenStack Ansible modules:
+1. Install the required packages on your laptop/workstation to configure it to run with openstacksdk, as required for OpenStack Ansible modules:
 
 - python-pip
 
@@ -13,7 +13,7 @@ Automating OpenStack tasks using Ansible
 `root# pip install openstacksdk ansible -U`
 
 
-* Configure a clouds.yaml file with the necessary settings to enable communication to OpenStack using the openstacksdk library:
+2. Configure a clouds.yaml file with the necessary settings to enable communication to OpenStack using the openstacksdk library:
 
 `root# mkdir /etc/openstack`
 
@@ -36,10 +36,10 @@ EOF
 ```
 
 
-* Request an authentication token:
+3. Request an authentication token:
 
 `root# ansible localhost -m os_auth -a cloud=ospcloud`
 
-* List all of the OpenStack users:
+4. List all of the OpenStack users:
 
 `root# ansible localhost -m os_user_facts -a cloud=ospcloud`
