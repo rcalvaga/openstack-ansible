@@ -16,7 +16,7 @@ Automating OpenStack tasks using Ansible
 * Configure a clouds.yaml file with the necessary settings to enable communication to OpenStack using the openstacksdk library:
 
 `root# mkdir /etc/openstack`
-```root# cat << EOF > /etc/openstack/clouds.yaml
+`root# cat << EOF > /etc/openstack/clouds.yaml
 clouds:
   ospcloud:
     auth:
@@ -30,7 +30,8 @@ ansible:
   use_hostnames: True
   expand_hostvars: False
   fail_on_errors: True
-EOF```
+EOF`
+
 
 * Request an authentication token:
 
