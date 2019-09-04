@@ -1,4 +1,4 @@
-- name: Install Ticketmonster App
+- name: Install Jboss and Deploy Ticketmonster Application
   hosts: all
   
   roles:
