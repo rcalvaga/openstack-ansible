@@ -15,7 +15,7 @@
         verify: no
         domain: default
         default_project: test-drive
-     register: openstack_user
+     register: osp_user
      
    - debug: 
-     var: openstack_user
+     var: osp_user
