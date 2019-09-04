@@ -21,7 +21,7 @@ Automating OpenStack tasks using Ansible
 ```
 root# cat << EOF > /etc/openstack/clouds.yaml
 clouds:
-  ospcloud:
+  devstack:
     auth:
       auth_url: http://192.168.0.20:5000/
       password: r3dh4t1!
@@ -39,8 +39,8 @@ EOF
 
 3. Request an authentication token:
 
-`root# ansible localhost -m os_auth -a cloud=ospcloud`
+`root# ansible localhost -m os_auth -a cloud=devstack`
 
 4. List all of the OpenStack users:
 
-`root# ansible localhost -m os_user_facts -a cloud=ospcloud`
+`root# ansible localhost -m os_user_facts -a cloud=devstack`
