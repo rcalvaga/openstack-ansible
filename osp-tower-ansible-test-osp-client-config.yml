@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: Verify OSP Connection
+  hosts: all
   gather_facts: no
   tasks:
     - name: Verify os_client_config 
