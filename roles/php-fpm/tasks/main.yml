@@ -1,5 +1,5 @@
 ---
-- name: Install php-fpm and deps
+- name: Install php-fpm and dependences
   yum: name={{ item }} state=present
   with_items:
     - php-5.4.45-13.el7.remi
