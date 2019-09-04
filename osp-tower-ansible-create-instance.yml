@@ -10,7 +10,7 @@
         state: present
         cloud: devstack
         verify: no
-        name: vmtest1
+        name: vmtest
         image: 	RHEL-7
         key_name: test-drive
         timeout: 200
@@ -18,4 +18,4 @@
         nics:
          - net-name: private
         meta:
-           hostname: test1
+           hostname: test
