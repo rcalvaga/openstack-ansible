@@ -1,5 +1,5 @@
 ---
-- name: Install WordPress, MariaDB, Nginx, and PHP-FPM
+- name: Install WordPress, MariaDB, Nginx, PHP-FPM and Wordpress
   hosts: all
 
   roles:
