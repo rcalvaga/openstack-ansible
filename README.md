@@ -1,7 +1,7 @@
 # openstack-ansible
 Automating OpenStack tasks using Ansible
 
-* Install the required packages on the jumpbox to configure it to run with openstacksdk, as required for OpenStack Ansible modules:
+* Install the required packages on your laptop/workstation to configure it to run with openstacksdk, as required for OpenStack Ansible modules:
 
 - python-pip
 
