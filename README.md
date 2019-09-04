@@ -10,6 +10,7 @@ Automating OpenStack tasks using Ansible
 - ansible
 
 `root# yum install -y python-pip git`
+
 `root# pip install openstacksdk ansible -U`
 
 
