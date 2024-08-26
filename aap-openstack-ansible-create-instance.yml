@@ -1,0 +1,24 @@
+---
+- name: Create Instance
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+        
+   - name: Create a new instance and attaches to a network and passes metadata to the instance
+     openstack.cloud.server:
+        state: present
+        cloud: {{ cloud }}
+        verify: no
+        name: {{ instance_name }}
+        image: 	{{ openstack_image }}
+        key_name: {{ openstack_key }}
+        timeout: 200
+        flavor: {{ openstack_flavor }}
+        security_groups:
+         - {{ openstack_secgroup }}
+        nics:
+         - net-id: {{ net_id }}
+         - net-name: {{ net_name }}
+        meta:
+           hostname: {{ hostname }}
