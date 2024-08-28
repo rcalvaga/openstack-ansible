@@ -7,18 +7,18 @@
   tasks:
    - name: Authenticate to the cloud
      openstack.cloud.auth:
-       cloud: {{ openstack_cloud }}
+       cloud: "{{ openstack_cloud }}"
        validate_certs: false
 
    - name: Create OSP Project
      openstack.cloud.project:
-        cloud: {{ openstack_cloud }}
+        cloud: "{{ openstack_cloud }}"
         state: present
-        name: {{ openstack_project }}
-        description: {{ openstack_project_description }}
+        name: "{{ openstack_project }}"
+        description: "{{ openstack_project_description }}"
         is_enabled: True
         wait: yes
-        region_name: {{ openstack_region_name }}
+        region_name: "{{ openstack_region_name }}"
         interface: public
-        domain: {{ openstack_domain_id }}
+        domain: "{{ openstack_domain_id }}"
         validate_certs: false
