@@ -8,17 +8,17 @@
    - name: Create a new instance and attaches to a network and passes metadata to the instance
      openstack.cloud.server:
         state: present
-        cloud: {{ openstack_cloud }}
+        cloud: "{{ openstack_cloud }}"
         verify: no
-        name: {{ instance_name }}
-        image: 	{{ openstack_image }}
-        key_name: {{ openstack_key }}
+        name: "{{ instance_name }}"
+        image: 	"{{ openstack_image }}"
+        key_name: "{{ openstack_key }}"
         timeout: 200
-        flavor: {{ openstack_flavor }}
+        flavor: "{{ openstack_flavor }}"
         security_groups:
-         - {{ openstack_secgroup }}
+         - "{{ openstack_secgroup }}"
         nics:
-         - net-id: {{ openstack_net_id }}
-         - net-name: {{ openstack_net_name }}
+         - net-id: "{{ openstack_net_id }}"
+         - net-name: "{{ openstack_net_name }}"
         meta:
-           hostname: {{ hostname }}
+           hostname: "{{ hostname }}"
