@@ -6,11 +6,11 @@
   tasks:
    - name: Create tiny flavor with 1024MB RAM, 1 vCPU, 10GB disk, 10GB ephemeral
      openstack.cloud.compute_flavor:
-        cloud: {{ openstack_cloud }}
+        cloud: "{{ openstack_cloud }}"
         state: present
-        name: {{ flavor_name }}
-        ram: {{ flavor_ram }}
-        vcpus: {{ flavor_cpus }}
-        disk: {{ flavor_disk_space_gb }}
-        ephemeral: {{ flavor_ephemeral_space_gb }}
-        description: {{ flavor_description }}
+        name: "{{ flavor_name }}"
+        ram: "{{ flavor_ram }}"
+        vcpus: "{{ flavor_cpus }}"
+        disk: "{{ flavor_disk_space_gb }}"
+        ephemeral: "{{ flavor_ephemeral_space_gb }}"
+        description: "{{ flavor_description }}"
