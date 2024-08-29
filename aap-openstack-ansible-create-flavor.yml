@@ -4,7 +4,7 @@
   gather_facts: False
   tasks:
   
-  - name: Create tiny flavor with 1024MB RAM, 1 vCPU, 10GB disk, 10GB ephemeral
+  - name: Create tiny flavor
     openstack.cloud.compute_flavor:
       cloud: "{{ openstack_cloud }}"
       state: present
