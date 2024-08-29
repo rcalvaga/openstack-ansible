@@ -9,7 +9,8 @@
         dest: /tmp
       register: image
 
-    - debug: 
-      var: image
+    - name: Print return information from the previous task
+       ansible.builtin.debug:
+         var: image
 
       
