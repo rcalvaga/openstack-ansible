@@ -1,18 +1,10 @@
 ---
 - name: Create a OSP Project
-  hosts: localhost
-  connection: local
-  gather_facts: False
-      
+  hosts: all
+  gather_facts: False   
   tasks:
-   - name: Authenticate to the cloud
-     openstack.cloud.auth:
-       cloud: "{{ openstack_cloud }}"
-       validate_certs: false
-
-   - name: Create OSP Project
-     openstack.cloud.project:
-        cloud: "{{ openstack_cloud }}"
+    - name: Create OSP Project
+      openstack.cloud.project:
         state: present
         name: "{{ openstack_project }}"
         description: "{{ openstack_project_description }}"
