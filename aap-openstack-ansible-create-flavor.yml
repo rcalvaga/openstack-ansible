@@ -1,7 +1,6 @@
 ---
 - name: Create Flavor
-  hosts: localhost
-  connection: local
+  hosts: all
   gather_facts: False
   tasks:
    - name: Create tiny flavor with 1024MB RAM, 1 vCPU, 10GB disk, 10GB ephemeral
