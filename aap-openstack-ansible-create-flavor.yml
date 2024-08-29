@@ -1,5 +1,5 @@
 ---
-- name: Create Instance
+- name: Create Flavor
   hosts: localhost
   connection: local
   gather_facts: False
