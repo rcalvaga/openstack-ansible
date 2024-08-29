@@ -2,16 +2,16 @@
 - name: Create Flavor
   hosts: all
   gather_facts: False
-  tasks:
   
-  - name: Create tiny flavor
-    openstack.cloud.compute_flavor:
-      cloud: "{{ openstack_cloud }}"
-      state: present
-      name: "{{ flavor_name }}"
-      ram: "{{ flavor_ram }}"
-      vcpus: "{{ flavor_cpus }}"
-      disk: "{{ flavor_disk_space_gb }}"
-      ephemeral: "{{ flavor_ephemeral_space_gb }}"
-      description: "{{ flavor_description }}"
+  tasks:
+    - name: Create tiny flavor
+      openstack.cloud.compute_flavor:
+        cloud: "{{ openstack_cloud }}"
+        state: present
+        name: "{{ flavor_name }}"
+        ram: "{{ flavor_ram }}"
+        vcpus: "{{ flavor_cpus }}"
+        disk: "{{ flavor_disk_space_gb }}"
+        ephemeral: "{{ flavor_ephemeral_space_gb }}"
+        description: "{{ flavor_description }}"
       
