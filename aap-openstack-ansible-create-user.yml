@@ -1,11 +1,10 @@
 ---
 - name: Create a OSP User
-  hosts: localhost
-  connection: local
+  hosts: all
   gather_facts: False
   tasks:
-   - name: Create OSP User
-     openstack.cloud.identity_user:
+    - name: Create OSP User
+      openstack.cloud.identity_user:
         state: present
         name: "{{ openstack_user_name }}"
         password: "{{ openstack_user_password }}"
@@ -14,7 +13,7 @@
         domain: "{{ openstack_domain_id }}"
         default_project: "{{ openstack_project }}"
         validate_certs: false
-     register: osp_user
-     
-   - debug: 
-     var: osp_user
+      register: osp_user
+      
+    - debug: 
+      var: osp_user
