@@ -1,8 +1,7 @@
 ---
-- name: Create Flavor
+- name: Create OSP Flavor
   hosts: all
   gather_facts: False
-  
   tasks:
     - name: Create tiny flavor
       openstack.cloud.compute_flavor:
