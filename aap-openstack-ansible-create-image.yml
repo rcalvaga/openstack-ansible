@@ -9,4 +9,7 @@
         dest: /tmp
       register: image
 
+    - debug: 
+      var: image
+
       
