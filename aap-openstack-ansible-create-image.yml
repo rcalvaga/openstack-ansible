@@ -9,5 +9,5 @@
         container_format: bare
         disk_format: "{{ image_disk_format }}"
         state: present
-        file: "{{ image_url_file }}"
+        filename: "{{ image_url_file }}"
         is_public: true
