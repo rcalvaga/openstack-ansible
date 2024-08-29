@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: False
   tasks:
-    - name: Download file and force basic auth
+    - name: Download image
       ansible.builtin.get_url:
         url: "{{ image_url_file }}"
         dest: /tmp
@@ -12,5 +12,23 @@
     - name: Print return information from the previous task
       ansible.builtin.debug:
         var: image.dest
+
+    - name: Setting fact related to image destination
+      ansible.builtin.set_fact:
+        image_dest: "{{  image.dest }}"
+
+    - name: Upload image
+      openstack.cloud.image:
+        name: "{{ image_name }}"
+        container_format: bare
+        disk_format: "{{ image_disk_format }}"
+        state: present
+        filename: "{{ image_dest }}"
+        is_public: true
+
+    - name: Delete image from /tmp
+      ansible.builtin.file:
+        path: "{{ image_dest }}"
+        state: absent  
 
       
