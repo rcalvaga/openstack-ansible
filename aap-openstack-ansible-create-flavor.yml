@@ -5,7 +5,6 @@
   tasks:
     - name: Create tiny flavor
       openstack.cloud.compute_flavor:
-        #cloud: "{{ openstack_cloud }}"
         state: present
         name: "{{ flavor_name }}"
         ram: "{{ flavor_ram }}"
