@@ -11,6 +11,6 @@
 
     - name: Print return information from the previous task
       ansible.builtin.debug:
-        var: image
+        var: image.dest
 
       
