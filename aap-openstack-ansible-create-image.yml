@@ -8,12 +8,5 @@
         url: "{{ image_url_file }}"
         dest: /tmp
       register: image
-    
-    - name: Upload an image from a URL
-      openstack.cloud.image:
-        name: "{{ image_name }}"
-        container_format: bare
-        disk_format: "{{ image_disk_format }}"
-        state: present
-        filename: "{{ image_url_file }}"
-        is_public: true
+
+      
