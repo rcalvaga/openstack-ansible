@@ -3,6 +3,12 @@
   hosts: all
   gather_facts: False
   tasks:
+    - name: Download file and force basic auth
+      ansible.builtin.get_url:
+        url: "{{ image_url_file }}"
+        dest: /tmp
+      register: image
+    
     - name: Upload an image from a URL
       openstack.cloud.image:
         name: "{{ image_name }}"
