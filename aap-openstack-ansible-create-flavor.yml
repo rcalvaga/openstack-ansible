@@ -3,6 +3,7 @@
   hosts: all
   gather_facts: False
   tasks:
+  
   - name: Create tiny flavor with 1024MB RAM, 1 vCPU, 10GB disk, 10GB ephemeral
     openstack.cloud.compute_flavor:
       cloud: "{{ openstack_cloud }}"
@@ -13,3 +14,4 @@
       disk: "{{ flavor_disk_space_gb }}"
       ephemeral: "{{ flavor_ephemeral_space_gb }}"
       description: "{{ flavor_description }}"
+      
