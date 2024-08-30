@@ -1,5 +1,5 @@
 ---
-- name: Create a OSP User
+- name: Create OSP User
   hosts: all
   gather_facts: False
   tasks:
