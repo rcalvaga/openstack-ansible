@@ -1,5 +1,5 @@
 ---
-- name: Create a OSP Project
+- name: Create OSP Project
   hosts: all
   gather_facts: False   
   tasks:
