@@ -1,9 +1,9 @@
 ---
-- name: Delete a OSP Keypair
+- name: DELETE a OSP Keypair
   hosts: all
   gather_facts: False
   tasks:
-    - name: Delete a keypair in OpenStack
+    - name: DELETE a keypair in OpenStack
       openstack.cloud.keypair:
         name: "{{ keypair_name }}"
         state: absent
