@@ -1,0 +1,9 @@
+---
+- name: DELETE an OSP Flavor
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: DELETE a flavor
+      openstack.cloud.compute_flavor:
+        name: "{{ flavor_name }}"
+        state: absent
