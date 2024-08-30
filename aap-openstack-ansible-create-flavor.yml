@@ -3,7 +3,7 @@
   hosts: all
   gather_facts: False
   tasks:
-    - name: Create tiny flavor
+    - name: Create a flavor
       openstack.cloud.compute_flavor:
         state: present
         name: "{{ flavor_name }}"
