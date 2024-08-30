@@ -8,7 +8,8 @@
         name: "{{ keypair_name }}"
         state: present
       register: keypair
-
-   - name: Print return information from the previous task
-     ansible.builtin.debug:
-       var: keypair
+      
+    - name: Print return information from the previous task
+      ansible.builtin.debug:
+        var: keypair
+       
