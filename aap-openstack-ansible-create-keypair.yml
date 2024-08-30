@@ -5,6 +5,6 @@
   tasks:
     - name: Create a keypair in OpenStack
       openstack.cloud.keypair:
-        name: "{{ openstack_keypair_name }}"
+        name: "{{ keypair_name }}"
         state: present
       register: keypair
