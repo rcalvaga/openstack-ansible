@@ -3,6 +3,12 @@
   hosts: all
   gather_facts: False
   tasks:
+    - name: Create a security group
+      openstack.cloud.security_group:
+        name: "{{ secgroup_name }}"
+        description: "{{ secgroup_description }}"
+        state: present
+
     - name: Create a security group rule
       openstack.cloud.security_group_rule:
         security_group: "{{ secgroup_name }}"
@@ -10,4 +16,4 @@
         port_range_min: "{{ port_range_min }}"
         port_range_max: "{{ port_range_max }}"
         remote_ip_prefix: "{{ remote_ip_prefix }}"
-        state: present
+        
