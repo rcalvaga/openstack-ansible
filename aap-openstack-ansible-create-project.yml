@@ -6,11 +6,11 @@
     - name: Create OSP Project
       openstack.cloud.project:
         state: present
-        name: "{{ openstack_project }}"
-        description: "{{ openstack_project_description }}"
+        name: "{{ project }}"
+        description: "{{ project_description }}"
         is_enabled: True
         wait: yes
-        region_name: "{{ openstack_region_name }}"
+        region_name: "{{ region_name }}"
         interface: public
-        domain: "{{ openstack_domain_id }}"
+        domain: "{{ domain_id }}"
         validate_certs: false
