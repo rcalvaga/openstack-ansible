@@ -12,4 +12,9 @@
     - name: Print return information from the previous task
       ansible.builtin.debug:
         var: keypair.keypair.private_key
+
+    - name: Add private key as artifact
+      set_stats:
+        data:
+          private_key: "{{ keypair.keypair.private_key }}"
        
