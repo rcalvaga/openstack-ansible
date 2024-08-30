@@ -8,14 +8,14 @@
         state: present
         verify: no
         name: "{{ instance_name }}"
-        image: 	"{{ openstack_image }}"
-        key_name: "{{ openstack_key }}"
+        image: 	"{{ image_name }}"
+        key_name: "{{ key_name }}"
         timeout: 200
-        flavor: "{{ openstack_flavor }}"
+        flavor: "{{ flavor_name }}"
         security_groups:
-          - "{{ openstack_secgroup }}"
+          - "{{ secgroup_name }}"
         nics:
-          - net-id: "{{ openstack_net_id }}"
-          - net-name: "{{ openstack_net_name }}"
+          - net-id: "{{ net_id }}"
+          - net-name: "{{ net_name }}"
         meta:
           hostname: "{{ hostname }}"
