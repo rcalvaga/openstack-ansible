@@ -1,0 +1,10 @@
+---
+- name: DELETE OSP Security Group
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: DELETE a security group rule
+      openstack.cloud.security_group_rule:
+        security_group: "{{ secgroup_name }}"
+        state: absent
+        
