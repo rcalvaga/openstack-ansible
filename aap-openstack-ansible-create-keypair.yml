@@ -11,5 +11,5 @@
       
     - name: Print return information from the previous task
       ansible.builtin.debug:
-        var: keypair
+        var: keypair.keypair.private_key
        
