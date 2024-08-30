@@ -1,0 +1,9 @@
+---
+- name: DELETE OSP Image
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: DELETE image "{{ image_name }}"
+      openstack.cloud.image:
+        name: "{{ image_name }}"
+        state: absent
