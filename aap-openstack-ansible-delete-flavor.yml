@@ -1,5 +1,5 @@
 ---
-- name: DELETE an OSP Flavor
+- name: DELETE OSP Flavor
   hosts: all
   gather_facts: False
   tasks:
