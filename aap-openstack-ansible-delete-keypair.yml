@@ -1,5 +1,5 @@
 ---
-- name: DELETE a OSP Keypair
+- name: DELETE OSP Keypair
   hosts: all
   gather_facts: False
   tasks:
