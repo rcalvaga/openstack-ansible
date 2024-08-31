@@ -9,4 +9,4 @@
        state: present
        network: "{{ public_network_name }}"
        interfaces:
-         - net: "{{ private_network_name }}"
+         - "{{ private_subnet_name }}"
