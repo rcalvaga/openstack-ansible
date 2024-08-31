@@ -1,0 +1,30 @@
+---
+- name: Create OSP Public Network
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: Create external network name 
+      openstack.cloud.network:
+        name: "{{ ext_network_name }}"
+        external: true
+        provider_physical_network: "{{ provider_physical_network }}"
+        provider_network_type: "{{ provider_network_type }}"
+        state: present
+
+    - name: Create external network subnet
+      openstack.cloud.subnet:
+       state: present
+       network_name: "{{ ext_network_name }}"
+       name: "{{ ext_subnet_name }}"
+       cidr: "{{ cidr }}"
+       is_dhcp_enabled: false
+       gateway_ip: "{{ gateway_ip }}"
+       allocation_pool_start: "{{ public_net_start }}"
+       allocation_pool_end: "{{ public_net_end }}"
+       dns_nameservers:
+         - "{{ dns }}"
+
+    
+
+        
+
