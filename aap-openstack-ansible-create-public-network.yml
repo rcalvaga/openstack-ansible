@@ -5,7 +5,7 @@
   tasks:
     - name: Create external network name 
       openstack.cloud.network:
-        name: "{{ ext_network_name }}"
+        name: "{{ public_network_name }}"
         external: true
         provider_physical_network: "{{ provider_physical_network }}"
         provider_network_type: "{{ provider_network_type }}"
@@ -14,11 +14,11 @@
     - name: Create external network subnet
       openstack.cloud.subnet:
        state: present
-       network_name: "{{ ext_network_name }}"
-       name: "{{ ext_subnet_name }}"
-       cidr: "{{ ext_subnet_cidr }}"
+       network_name: "{{ public_network_name }}"
+       name: "{{ public_subnet_name }}"
+       cidr: "{{ public_subnet_cidr }}"
        is_dhcp_enabled: false
-       gateway_ip: "{{ ext_subnet_gateway }}"
+       gateway_ip: "{{ public_subnet_gateway }}"
        allocation_pool_start: "{{ public_net_start }}"
        allocation_pool_end: "{{ public_net_end }}"
        dns_nameservers:
