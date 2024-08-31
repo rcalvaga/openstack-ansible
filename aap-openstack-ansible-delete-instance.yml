@@ -1,0 +1,9 @@
+---
+- name: DELETE an Instance
+  hosts: all
+  gather_facts: False
+  tasks:        
+    - name: DELETE an instance
+      openstack.cloud.server:
+        name: "{{ instance_name }}"
+        state: absent
