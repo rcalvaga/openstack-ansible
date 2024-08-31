@@ -9,10 +9,4 @@
         name: "{{ user_name }}"
         password: "{{ user_password }}"
         email: "{{ user_email }}"
-        domain: "{{ domain_id }}"
         default_project: "{{ project }}"
-        validate_certs: false
-      register: osp_user
-      
-    - debug: 
-      var: osp_user
