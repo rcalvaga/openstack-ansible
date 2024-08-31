@@ -1,6 +1,12 @@
-- openstack.cloud.router:
-    name: "{{ router_name }}"
-    state: present
-    network: "{{ public_network_name }}"
-    interfaces:
-      - net: "{{ private_network_name }}"
+---
+- name: Create OSP Router
+  hosts: all
+  gather_facts: False
+  tasks:
+   - name: Create a router with one internal subnet interface
+     openstack.cloud.router:
+       name: "{{ router_name }}"
+       state: present
+       network: "{{ public_network_name }}"
+       interfaces:
+         - net: "{{ private_network_name }}"
