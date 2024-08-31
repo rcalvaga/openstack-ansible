@@ -5,12 +5,8 @@
   tasks:
     - name: Create OSP Project
       openstack.cloud.project:
-        state: present
         name: "{{ project }}"
         description: "{{ project_description }}"
-        is_enabled: True
+        is_enabled: true
         wait: yes
-        region_name: "{{ region_name }}"
-        interface: public
-        domain: "{{ domain_id }}"
-        validate_certs: false
+        state: present
