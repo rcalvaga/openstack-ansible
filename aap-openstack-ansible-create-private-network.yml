@@ -1,0 +1,18 @@
+---
+- name: Create OSP Private Network
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: Create internal network name 
+      openstack.cloud.network:
+        name: "{{ private_network_name }}"
+        external: false
+        state: present
+
+    - name: Create internal network subnet
+      openstack.cloud.subnet:
+       state: present
+       network_name: "{{ private_network_name }}"
+       name: "{{ private_subnet_name }}"
+       cidr: "{{ private_subnet_cidr }}"
+       is_dhcp_enabled: true
