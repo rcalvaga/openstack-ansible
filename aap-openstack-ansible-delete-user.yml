@@ -1,0 +1,9 @@
+---
+- name: DELETE OSP User
+  hosts: all
+  gather_facts: False
+  tasks:
+    - name: DELETE OSP User
+      openstack.cloud.identity_user:
+        name: "{{ user_name }}"
+        state: absent
