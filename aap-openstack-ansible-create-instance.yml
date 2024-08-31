@@ -9,13 +9,15 @@
         verify: no
         name: "{{ instance_name }}"
         image: 	"{{ image_name }}"
-        key_name: "{{ key_name }}"
+        key_name: "{{ keypair_name }}"
         timeout: 200
         flavor: "{{ flavor_name }}"
         security_groups:
           - "{{ secgroup_name }}"
-        nics:
-          - net-id: "{{ net_id }}"
-          - net-name: "{{ net_name }}"
+        network: "{{ private_subnet_name }}"
         meta:
-          hostname: "{{ hostname }}"
+          hostname: "{{ instance_hostname }}"
+
+    - name: Create and assign floating IP
+      openstack.cloud.floating_ip:
+        server: "{{ instance_name }}"
