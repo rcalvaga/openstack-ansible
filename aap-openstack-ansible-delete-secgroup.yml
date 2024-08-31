@@ -3,8 +3,8 @@
   hosts: all
   gather_facts: False
   tasks:
-    - name: DELETE a security group rule
-      openstack.cloud.security_group_rule:
+    - name: DELETE a security group
+      openstack.cloud.security_group:
         security_group: "{{ secgroup_name }}"
         state: absent
         
