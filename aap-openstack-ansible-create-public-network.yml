@@ -16,9 +16,9 @@
        state: present
        network_name: "{{ ext_network_name }}"
        name: "{{ ext_subnet_name }}"
-       cidr: "{{ cidr }}"
+       cidr: "{{ ext_subnet_cidr }}"
        is_dhcp_enabled: false
-       gateway_ip: "{{ gateway_ip }}"
+       gateway_ip: "{{ ext_subnet_gateway }}"
        allocation_pool_start: "{{ public_net_start }}"
        allocation_pool_end: "{{ public_net_end }}"
        dns_nameservers:
