@@ -52,16 +52,16 @@ Access to **Ansible Automation Platform Controller UI** with an Administrator Us
 5. Create Job Templates using the new OpenStack Execution Environment:
  - On the **Templates** list view, select **Add job template** from the **Add** list.
  - Enter the appropriate details in the following fields:
-     - **Name:** Enter a name for the job (in this example, OpenStack - Add Keypair).
+     - **Name:** Enter a name for the job (in this example, **OpenStack - Add Keypair**).
      - **Description:** Enter an arbitrary description as appropriate (optional).
      - **Job Type:** Run
      - **Inventory:** Keep Demo Inventory
      - **Project:** Select OpenStack Project
      - **Execution Environment:** Select OpenStack Execution Environment
-     - **Playbook:** Choose the playbook to be launched with this job template from the available playbooks (in this example, aap-openstack-ansible-create-keypair.yml).
-     - **Credentials:** Choose your OpenStack credentials (in this example, OpenStack adminCredentials).
-     - **Labels:** Optionally supply labels that describe this job template (in this example, openstack).
-     - **Variables:** Pass extra variables to the playbook (in this example we just need keypair_name: ansibletest1). Check **Prompt on launch** option.
+     - **Playbook:** Choose the playbook to be launched with this job template from the available playbooks (in this example, **aap-openstack-ansible-create-keypair.yml**).
+     - **Credentials:** Choose your OpenStack credentials (in this example, **OpenStack admin Credentials**).
+     - **Labels:** Optionally supply labels that describe this job template (in this example, **openstack**).
+     - **Variables:** Pass extra variables to the playbook (in this example we just need **keypair_name: ansibletest1**). Check **Prompt on launch** option.
  - Click **[Save]**.
 
 ![aap-create-templates](https://github.com/user-attachments/assets/f7d0996e-07fd-43a0-bb66-7197282b6da6)
