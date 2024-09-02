@@ -27,9 +27,9 @@ Access to **Ansible Automation Platform Controller UI** with an Administrator Us
      - **Password (API Key):** The password or API key to use to connect to OpenStack.
      - **Host (Authentication URL):** The host to be used for authentication.
      - **Project (Tenant Name):** The Tenant name or Tenant ID used for OpenStack. This value is usually the same as the username (in this example, **admin**).
-     - **Project (Domain Name):** Optionally provide the project name associated with your domain.
-     - **Domain name:** Optionally provide the FQDN to be used to connect to OpenStack.
-     - **Region Name:** Optionally provide the region name associated with your domain.
+     - **Project (Domain Name):** Optionally provide the project name associated with your domain (in this example, **Default**).
+     - **Domain name:** Optionally provide the FQDN to be used to connect to OpenStack (in this example, **Default**).
+     - **Region Name:** Optionally provide the region name associated with your domain (in this example, **RegionOne**).
  - Click **[Save]**.
 
 ![aap-openstack-credentials](https://github.com/user-attachments/assets/b4c32ecb-3f0c-4af9-8f6a-79b72c541248)
