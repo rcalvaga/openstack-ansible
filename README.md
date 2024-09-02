@@ -1,17 +1,9 @@
 # openstack-ansible-aap
-Automating OpenStack tasks using Ansible
+Automating OpenStack - Overcloud tasks using Ansible Automation Platform
 
-1. Install the required packages on your laptop/workstation to configure it to run with openstacksdk, as required for OpenStack Ansible modules:
+1. Create a new Execution Environment with necessary collection (openstack.cloud):
+![aap-ee-openstack](https://github.com/user-attachments/assets/4027658d-2db6-40e8-a2f5-11024dac9fe8)
 
-- python-pip
-
-- openstacksdk
-
-- ansible
-
-`root# yum install -y python-pip git`
-
-`root# pip install openstacksdk ansible -U`
 
 
 2. Configure a clouds.yaml file with the necessary settings to enable communication to OpenStack using the openstacksdk library:
