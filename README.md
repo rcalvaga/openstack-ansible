@@ -1,7 +1,8 @@
 # openstack-ansible-aap
 **Automating OpenStack - Overcloud tasks using Ansible Automation Platform**
 
-Access to Ansible Automation Platform Controller UI with an Administrator User.
+Access to **Ansible Automation Platform Controller UI** with an Administrator User:
+
 
 1. Create a new Execution Environment with necessary collection (**openstack.cloud**):
  - From the navigation panel, select **Administration --> Execution Environments**.
@@ -13,29 +14,28 @@ Access to Ansible Automation Platform Controller UI with an Administrator User.
     - **Description**: OpenStack Execution Environment
  - Click **[Save]**.
    
-![aap-ee-openstack](https://github.com/user-attachments/assets/4027658d-2db6-40e8-a2f5-11024dac9fe8)
-
+![aap-ee-openstack](https://github.com/user-attachments/assets/dbaedcba-6704-432f-9073-ff8f0eeb47b4)
 
 
 2. Configure OpenStack Cloud credentials:
  - From the navigation panel, select **Resources --> Credentials**.
  - Click **[Add]**.
  - Enter the following information:
-
-The name for your new credential.
-Optional: a description for the new credential.
-Optional: The name of the organization with which the credential is associated.
+     - The name for your new credential.
+     - Optional: a description for the new credential.
+     - Optional: The name of the organization with which the credential is associated.
 
  - OpenStack credentials have the following inputs that are required:
-     - Username: The username to use to connect to OpenStack.
-     - Password (API Key): The password or API key to use to connect to OpenStack.
-     - Host (Authentication URL): The host to be used for authentication.
-     - Project (Tenant Name): The Tenant name or Tenant ID used for OpenStack. This value is usually the same as the username.
-     - Project (Domain Name): Optionally provide the project name associated with your domain.
-     - Region Name: Optionally provide the region name associated with your domain.
+     - **Username:** The username to use to connect to OpenStack.
+     - **Password (API Key):** The password or API key to use to connect to OpenStack.
+     - **Host (Authentication URL):** The host to be used for authentication.
+     - **Project (Tenant Name):** The Tenant name or Tenant ID used for OpenStack. This value is usually the same as the username.
+     - **Project (Domain Name):** Optionally provide the project name associated with your domain.
+     - **Region Name:** Optionally provide the region name associated with your domain.
 
 Domain name: Optionally provide the FQDN to be used to connect to Ope
-![aap-openstack-credentials](https://github.com/user-attachments/assets/63da6fca-4acb-40af-b939-fc3221ac06b1)
+
+![aap-openstack-credentials](https://github.com/user-attachments/assets/b4c32ecb-3f0c-4af9-8f6a-79b72c541248)
 
 
 `root# mkdir /etc/openstack`
