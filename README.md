@@ -2,11 +2,19 @@
 Automating OpenStack - Overcloud tasks using Ansible Automation Platform
 
 1. Create a new Execution Environment with necessary collection (openstack.cloud):
+ - From the navigation panel, select Administration --> Execution Environments.
+ - Click Add to add an execution environment.
+ - Enter the appropriate details into the following fields:
+    - Name: OpenStack Execution Environment
+    - Image: quay.io/rcalvaga/ee-openstack
+    - Pull: Only pull the image if not present before running
+    - Description: OpenStack Execution Environment
+   
 ![aap-ee-openstack](https://github.com/user-attachments/assets/4027658d-2db6-40e8-a2f5-11024dac9fe8)
 
 
 
-2. Configure a clouds.yaml file with the necessary settings to enable communication to OpenStack using the openstacksdk library:
+3. Configure a clouds.yaml file with the necessary settings to enable communication to OpenStack using the openstacksdk library:
 
 `root# mkdir /etc/openstack`
 
