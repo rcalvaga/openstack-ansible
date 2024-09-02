@@ -1,4 +1,4 @@
-# openstack-ansible
+# openstack-ansible-aap
 Automating OpenStack tasks using Ansible
 
 1. Install the required packages on your laptop/workstation to configure it to run with openstacksdk, as required for OpenStack Ansible modules:
