@@ -1,5 +1,6 @@
 # openstack-ansible-aap
 **Automating OpenStack - Overcloud tasks using Ansible Automation Platform**
+
 Access to **Ansible Automation Platform Controller UI** with an Administrator User:
 1. Create a new Execution Environment with necessary collection (**openstack.cloud**):
  - From the navigation panel, select **Administration --> Execution Environments**.
